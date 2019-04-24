@@ -1,12 +1,36 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # RPG Game
-This is a recipe finder built withReactJS. The main purpose of this project is to learn O.
+This is a recipe finder built with ReactJS usinf the Edamam API. 
 
-## Built with
-*React
-*Javascript
 
+
+## Usage
+
+```Javascript 
+ const getRecipes = async () => {
+    const response = await fetch(
+      `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+    );
+    const data = await response.json();
+    setRecipes(data.hits);
+    console.log(data.hits);
+  };
+  const updateSearch = e => {
+    setSearch(e.target.value);
+  };
+  const getSearch = e => {
+    e.preventDefault();
+    setQuery(search);
+    setSearch('');
+  };
+
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
 
 
 

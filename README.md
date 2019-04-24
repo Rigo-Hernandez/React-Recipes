@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# RPG Game
+This is a recipe finder built withReactJS. The main purpose of this project is to learn O.
+
+## Built with
+*React
+*Javascript
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:

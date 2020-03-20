@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# RPG Game
+# React-Recipes
 This is a recipe finder built with ReactJS usinf the Edamam API. 
 
 

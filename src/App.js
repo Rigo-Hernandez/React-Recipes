@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import Recipe from "./Recipe";
-import "./App.css";
+import React, { useEffect, useState } from 'react';
+import Recipe from './Recipe';
+import './App.css';
 
 const App = () => {
-  const APP_ID = "65076721";
-  const APP_KEY = "314fdccd56fe5bf55bf08533731288bd";
+  const APP_ID = '65076721';
+  const APP_KEY = '314fdccd56fe5bf55bf08533731288bd';
 
   const [recipes, setRecipes] = useState([]);
-  const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("chicken");
+  const [search, setSearch] = useState('');
+  const [query, setQuery] = useState('chicken');
 
   useEffect(() => {
     getRecipes();
@@ -32,32 +32,33 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <form onSubmit={getSearch} className="search-form">
+    <div className='App'>
+      <form onSubmit={getSearch} className='search-form'>
         <input
-          className="search-bar"
-          type="text"
+          className='search-bar'
+          type='text'
           value={search}
           onChange={updateSearch}
-          placeholder="Type an ingredient to search for it"
+          placeholder='Type an ingredient to search for it'
         />
-        <button className="search-button" type="submit">
+        <button className='search-button' type='submit'>
           Search
         </button>
       </form>
-      <div className="recipes">
-      {recipes.map(recipe => (
-        <Recipe
-          key={recipe.recipe.label}
-          title={recipe.recipe.label}
-          calories={recipe.recipe.calories}
-          image={recipe.recipe.image}
-          ingredients = {recipe.recipe.ingredients}
-        />
-      ))}
+      <div className='recipes'>
+        {recipes.map(recipe => (
+          <Recipe
+            key={recipe.recipe.label}
+            title={recipe.recipe.label}
+            calories={recipe.recipe.calories}
+            image={recipe.recipe.image}
+            ingredients={recipe.recipe.ingredients}
+          />
+        ))}
       </div>
     </div>
   );
 };
+
 
 export default App;
